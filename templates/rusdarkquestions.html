@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="rusdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="rusdarksignin.html">Заказчикам</a>
+                <a href="rusdarksignin.html">Артистам</a> 
+                <a href="rusdarkevents.html">События</a> 
+                
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarkquestions.html" class="language">kz</a>/
+                <a href="rusdarkquestions.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="ruslightquestions.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="rusdarkaccount.html">Войти / Регистрация</a></li>
+                <li><a href="rusdark.html">Главная страница</a></li>
+                <li><a href="rusdarkevents.html">События</a></li>
+                <li><a href="rusdarkquestions.html">Часто задаваемые вопросы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1 class="questions_h1">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Что такое музыкальная бизнес-платформа?</div>
+            <div class="accordion-content">
+                Музыкальная бизнес-платформа — это онлайн-сервис для взаимодействия заказчиков и музыкантов. Заказчики удаленно находят здесь исполнителей для своих мероприятий, а музыканты предоставляют услуги
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Как начать работать в музыкальной бизнес-платформе?</div>
+            <div class="accordion-content">
+                Для начала зарегистрируйтесь на музыкальной бизнес-платформе и пройдите верификацию для подтверждения личности. Заполните профиль на сервисе, укажите основную информацию о себе, добавьте в портфолио примеры 3 удачных выступлений. Теперь вы можете откликаться на объявления о поиске музыкантов
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Сколько можно заработать в музыкальной бизнес-платформе?</div>
+            <div class="accordion-content">
+                Заработок зависит от нескольких факторов: сложности выступления, жанра музыки, опыта и навыков музыканта. Новички на музыкальной бизнес-платформе зарабатывают от $100 до $500, профессионалы с большим опытом могут зарабатывать от $500 до $1000 и больше.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Что такое Musichub?</div>
+            <div class="accordion-content">
+                Musichub — онлайн площадка для музыкантов всех уровней:
+Новичкам — для старта карьеры и первых выступлений, даже если у вас нет опыта.
+Профессионалам — как возможность найти постоянных клиентов и отточить навыки.
+Заказчикам — для поиска музыкантов, которые быстро и качественно исполнят номера любой сложности.
+Зарегистрируйтесь прямо сейчас и станьте частью нашего музыкального сообщества!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Нам доверяют:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>и многие другие легенды
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+</body>
+</html>

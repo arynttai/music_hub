@@ -1,0 +1,152 @@
+-- ТАБЛИЦЫ
+
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY NOT NULL,
+    user_fname VARCHAR(50) NOT NULL,
+    user_lname VARCHAR(50) NOT NULL,
+    user_phone VARCHAR(20) NOT NULL,
+    user_email VARCHAR(50) NOT NULL,
+    user_password VARCHAR(50) NOT NULL,
+    band_id INT, -- Add band_id column for foreign key reference
+    event_id INT -- Add event_id column for foreign key reference
+);
+
+CREATE TABLE bands (
+    band_id SERIAL PRIMARY KEY NOT NULL,
+    band_name VARCHAR(255)
+);
+
+CREATE TABLE band_details (
+    band_id INT PRIMARY KEY, -- Add primary key for band_id
+    FOREIGN KEY (band_id) REFERENCES bands (band_id),
+    rating INT NOT NULL,
+    band_specialization VARCHAR(50) NOT NULL,
+    band_description VARCHAR(255) NOT NULL,
+    band_experience VARCHAR(255) NOT NULL,
+    band_location VARCHAR(50) NOT NULL,
+    band_members INT NOT NULL,
+    band_roles VARCHAR(50) NOT NULL,
+    band_contact_info VARCHAR(255) NOT NULL,
+    band_average_check VARCHAR(255) NOT NULL
+);
+CREATE TABLE events (
+    event_id int generated always as identity PRIMARY KEY NOT NULL,
+    event_name VARCHAR(255)
+);
+
+drop TABLE event_details;
+CREATE TABLE event_details (
+    event_id INT generated always as identity PRIMARY KEY, -- Add primary key for event_id
+	event_name VARCHAR(255),
+    event_specialization VARCHAR(50) NOT NULL,
+    event_description VARCHAR(255) NOT NULL,
+    event_experience VARCHAR(255) NOT NULL,
+    event_location VARCHAR(50) NOT NULL,
+    event_members INT NOT NULL,
+    event_roles VARCHAR(50) NOT NULL,
+    event_contact_info VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE band_orders (
+    band_order_id SERIAL PRIMARY KEY NOT NULL,
+    user_id INT,
+    band_id INT,
+    FOREIGN KEY (user_id) REFERENCES users (user_id),
+    FOREIGN KEY (band_id) REFERENCES bands (band_id),
+    status BOOLEAN,
+    rating INT 
+);
+
+CREATE TABLE event_orders (
+    event_order_id SERIAL PRIMARY KEY NOT NULL,
+    user_id INT,
+    event_id INT,
+    FOREIGN KEY (user_id) REFERENCES users (user_id),
+    FOREIGN KEY (event_id) REFERENCES events (event_id),
+    status BOOLEAN,
+    rating INT
+);
+
+alter table users add CONSTRAINT fk_band_id FOREIGN KEY(band_id) REFERENCES bands(band_id);
+alter table users add CONSTRAINT fk_event_id FOREIGN KEY(event_id) REFERENCES events(event_id);
+
+
+
+-- ОБРАБОТКА ОШИБОК
+CREATE OR REPLACE FUNCTION insert_band_order(
+    p_user_id INT,
+    p_band_id INT,
+    p_status BOOLEAN,
+    p_rating INT
+)
+RETURNS VOID AS
+$$
+BEGIN
+    -- Проверяем, существует ли user_id
+    IF NOT EXISTS (SELECT 1 FROM users WHERE user_id = p_user_id) THEN
+        RAISE EXCEPTION 'Пользователь с ID % не найден', p_user_id;
+    END IF;
+
+    -- Проверяем, существует ли band_id
+    IF NOT EXISTS (SELECT 1 FROM bands WHERE band_id = p_band_id) THEN
+        RAISE EXCEPTION 'Группа с ID % не найдена', p_band_id;
+    END IF;
+
+    -- Выполняем вставку данных
+    INSERT INTO band_orders (user_id, band_id, status, rating)
+    VALUES (p_user_id, p_band_id, p_status, p_rating);
+
+    -- Если все успешно, фиксируем транзакцию
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        -- Откатываем транзакцию в случае исключения
+        ROLLBACK;
+        -- Поднимаем исключение для вызывающего приложения
+        RAISE;
+END;
+$$
+LANGUAGE plpgsql;
+
+
+--ИНДЕКСЫ
+-- Index for the foreign key column in band_details
+CREATE INDEX idx_band_details_band_id ON band_details(band_id);
+
+-- Index for the foreign key column in event_details
+CREATE INDEX idx_event_details_event_id ON event_details(event_id);
+
+-- Index for the foreign key columns in band_orders
+CREATE INDEX idx_band_orders_user_id ON band_orders(user_id);
+CREATE INDEX idx_band_orders_band_id ON band_orders(band_id);
+
+-- Index for the foreign key columns in event_orders
+CREATE INDEX idx_event_orders_user_id ON event_orders(user_id);
+CREATE INDEX idx_event_orders_event_id ON event_orders(event_id);
+
+-- Index for the band_id column in users (foreign key)
+CREATE INDEX idx_users_band_id ON users(band_id);
+
+-- Index for the event_id column in users (foreign key)
+CREATE INDEX idx_users_event_id ON users(event_id);
+
+SELECT * FROM users;
+SELECT * FROM bands;
+SELECT * FROM band_details;
+
+drop table bands;
+drop table band_details;
+
+CREATE TABLE band_details (
+    band_id int generated always as identity PRIMARY KEY, -- Add primary key for band_id
+    band_name varchar(60) not null,
+    rating INT CHECK (rating >= 1 AND rating <= 5) default 4,
+    band_specialization VARCHAR(50) NOT NULL,
+    band_description VARCHAR(255) NOT NULL,
+    band_experience VARCHAR(255) NOT NULL,
+    band_location VARCHAR(50) NOT NULL,
+    band_members INT NOT NULL,
+    band_roles VARCHAR(50) NOT NULL,
+    band_contact_info VARCHAR(255) NOT NULL,
+    band_average_check VARCHAR(255) NOT NULL
+);

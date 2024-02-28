@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="kazdarksignin.html">Тұтынушыларға</a>
+                <a href="kazdarksignin.html">Әртістерге</a> 
+                <a href="kazdarkevents.html">Оқиғалар</a> 
+                
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarkquestions.html" class="language" style="color: white !important;">kz</a>/
+                <a href="rusdarkquestions.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazlightquestions.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/menu_image.jpg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazdarkaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazdark.html">Басты бет</a></li>
+                <li><a href="kazdarkevents.html">Оқиғалар</a></li>
+                <li><a href="kazdarkquestions.html">Жиі қойылатын сұрақтар</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1 class="questions_h1">ЖИІ ҚОЙЫЛАТЫН СҰРАҚТАР</h2>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Музыкалық бизнес платформасы дегеніміз не?</div>
+            <div class="accordion-content">
+                Музыкалық бизнес-платформа-бұл клиенттер мен музыканттардың өзара әрекеттесуіне арналған онлайн-қызмет. Клиенттер өз іс-шаралары үшін орындаушыларды қашықтан табады, ал музыканттар қызмет көрсетеді
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Музыкалық бизнес-платформада қалай жұмыс істеуге болады?</div>
+            <div class="accordion-content">
+                Бастау үшін музыкалық бизнес платформасына тіркеліп, жеке басын растау үшін тексеруден өтіңіз. Қызметтегі Профильді толтырыңыз, өзіңіз туралы негізгі ақпаратты көрсетіңіз, портфолиоға 3 сәтті сөйлеудің мысалдарын қосыңыз. Енді сіз музыканттарды іздеу туралы хабарландыруларға жауап бере аласыз
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Музыкалық бизнес платформасында қанша ақша табуға болады?</div>
+            <div class="accordion-content">
+                Табыс бірнеше факторларға байланысты: қойылымның күрделілігі, музыка жанры, музыканттың тәжірибесі мен дағдылары. Музыкалық бизнес-платформаға жаңадан келгендер от 100-ден 5 500-ге дейін, тәжірибесі мол мамандар 5 500-ден 1 1000-ға дейін немесе одан да көп ақша таба алады.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="questions_size">
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Musichub дегеніміз не?</div>
+            <div class="accordion-content">
+                Musichub-барлық деңгейдегі музыканттарға арналған онлайн алаң:
+Жаңадан бастаушылар үшін-сіздің тәжірибеңіз болмаса да, Мансапты бастау және алғашқы қойылымдар үшін.
+Кәсіби мамандар-тұрақты клиенттерді табу және дағдыларды шыңдау мүмкіндігі ретінде.
+Клиенттерге-кез-келген қиындықтағы нөмірлерді тез және сапалы орындайтын музыканттарды іздеу.
+Дәл қазір тіркеліп, біздің музыкалық қауымдастықтың бір бөлігі болыңыз!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Бізге сенеді:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>және тағы да басқа аңыз адамдар.
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+</body>
+</html>

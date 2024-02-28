@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='stylelight.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazlight.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="kazlightmusicians.html">Тұтынушыларға</a>
+                <a href="kazlightcustomers.html">Әртістерге</a> 
+                <a href="kazlightevents.html">Оқиғалар</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdark.html" class="kazakh_language" style="color: white !important;">kz</a> /
+                <a href="rusdark.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazdarkcustomers.html">
+                <img src="{{ url_for('static', path='images/sun-regular.svg') }}" height="30" width="30" alt="sun">
+            </a>
+            <div class="menu" onclick="togglelmenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div> 
+
+    <div id="lmenuOverlay" onclick="togglelmenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazlightmain.html">Басты бет</a></li>
+                <li><a href="kazlightaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazlightevents.html">Оқиғалар</a></li>
+                <li><a href="kazlightquestions.html">Жиі қойылатын сұрақтар</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="cards_size">
+        <div class="card-container">
+            <div class="card">
+              <img src="{{ url_for('static', path='images/cust1.jpg') }}" alt="Группа 1" class="card-image">
+              <div class="card-content">
+                <div class="group-info">
+                  <h2 class="group-name">"Гитарная Легенда" рок-фестивалі</h2>
+                </div>
+                <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Рок тобы</p>
+                <p class="group-location">Мәскеу, Ресей</p>
+                <p class="group-description">Біз кәсіби дыбыстық жабдықтар мен жомарт төлемдерді ұсынамыз. Біздің фестивальдің атмосферасын құру үшін жігерлі топтар іздейміз.</p>
+                <a class="transparent-button" href="kazlightc1.html">Өту</a>
+              </div>
+            </div>
+          
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust2.jpg') }}" alt="Группа 2" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Jazz Night at City Plaza</h2>
+                  </div>
+                  <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Джаз тобы</p>
+                  <p class="group-location">Нью-Йорк, АҚШ</p>
+                  <p class="group-description">Біз сізді жоғары төлемдер мен кәсіби жарықтандыруды күтеміз. Іс-шарамызды безендіру үшін бізге дарынды джаз топтары қажет.</p>
+                  <a class="transparent-button" href="kazlightc2.html">Өту</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust3.jpg') }}" alt="Группа 3" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Әлемдік Музыканың Үлкен Ашық Фестивалі</h2>
+                    </div>
+                    <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Әлемдік Музыка</p>
+                    <p class="group-location">Лондон, Ұлыбритания</p>
+                    <p class="group-description">Кәсіби жағдайлар және керемет дыбыстық жабдық. Біздің сахнаға ерекше дыбыстар әкелетін топтарды іздейміз.</p>
+                    <a class="transparent-button" href="kazlightc3.html">Өту</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust4.jpg') }}" alt="Группа 4" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Өзен жағасындағы романтикалық кеш</h2>
+                    </div>
+                    <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Акустикалық топтар</p>
+                    <p class="group-location">Париж, Франция</p>
+                    <p class="group-description">Жомарт төлемдер және жоғары сапалы дыбыстық жабдық. Біз ұмытылмас атмосфераны құру үшін акустикалық топтарды іздейміз.</p>
+                    <a class="transparent-button" href="kazlightc4.html">Өту</a>
+                </div>
+            </div>
+            
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust5.jpg') }}" alt="Группа 5" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Латын Америкасы Музыкасының Жазғы Фестивалі</h2>
+                    </div>
+                    <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Латын Америкасы музыкасы</p>
+                    <p class="group-location">Буэнос-Айрес, Аргентина</p>
+                    <p class="group-description">Жақсартылған жағдайлар және таланттарыңызды көрсету үшін үлкен мүмкіндік. Біз іс-шараға қуат пен құмарлық әкелетін топтарды іздейміз.</p>
+                    <a class="transparent-button" href="kazlightc5.html">Өту</a>
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust6.jpg') }}" alt="Группа 6" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Корольдік театрдағы классикалық кеш</h2>
+                    </div>
+                    <p class="group-specialization">Тақырыптық және жеке іс-шаралар / Классикалық музыка</p>
+                    <p class="group-location">Вена, Австрия</p>
+                    <p class="group-description">Кәсіби дыбыстық жабдық және ризашылық білдіретін көрермендер. Біз талғампаз атмосфераны құру үшін талантты классикалық топтарды іздейміз.</p>
+                    <a class="transparent-button" href="kazlightc1.html">Өту</a>
+                </div>
+            </div>
+            
+          </div>
+          
+    </div>
+
+
+    <div id="footer">
+        <h2>MUSIC HUB FOREVER</h2>
+        <hr color= "#92774d">
+        <p>
+            Бізге сенеді:
+            <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+            <br>және тағы да басқалары .
+        </p> 
+        </p>
+            <hr color= #222222>
+        <div id="footer_images">
+            <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+        </div>
+    </div>
+
+</body>
+</html>
+

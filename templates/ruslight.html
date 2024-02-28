@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='stylelight.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="rusdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="#second_block_size_back">Заказчикам</a>
+                <a href="#third_content_block1">Артистам</a> 
+                <a href="rusdarkevents.html">События</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdark.html" class="kazakh_language">kz</a> /
+                <a href="rusdark.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="rusdark.html"><img src="{{ url_for('static', path='images/sun-regular.svg') }}" height="30" width="30" alt="sun"></a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lmenuOverlay" onclick="togglelmenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="ruslight.html">Главная страница</a></li>
+                <li><a href="ruslightaccount.html">Войти / Регистрация</a></li>
+                <li><a href="ruslightevents.html">События</a></li>
+                <li><a href="ruslightquestions.html">Часто задаваемые вопросы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="lfirst_block_size_back">
+        <div id="lfirst_block">
+            <div class="first_half_one"></div>
+            <div class="first_half_two">
+                <h2>Для Артистов</h2>
+                <p>Отправьте свою музыку в мир! Наша платформа помогает музыкантам найти свое место в индустрии, предоставляя инструменты для продвижения и поиска новых возможностей.</p>
+                <a href="ruslightaccount.html" class="first_button">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lsecond_block_size_back">
+        <div id="lsecond_block">
+            <div class="second_half_one"></div>
+            <div class="second_half_two">
+                <h2>Для заказчиков</h2>
+                <p>Добро пожаловать в раздел 'Заказчикам' на нашей платформе, где вы можете найти исполнителей по стилю, жанру, опыту и даже локации. Не важно, ищете ли вы артиста для особого события или хотите укрепить состав для долгосрочного сотрудничества, здесь вы найдете множество талантливых профессионалов.</p>
+                <a href="ruslightaccount.html" class="first_button">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lthird_block_size">
+        <div id="lthird_block">
+            <div id="lthird_content_block1">
+                <div></div>            
+                <h6 class="third_text1">Артистам</h6>
+                <h2 class="third_text2">Почему артисты выбирают Music Hub?</h2>
+            </div>
+            <div id="lthird_content_block2">
+                <div class="third_img_block">
+                    <img src="{{ url_for('static', path='images/papa.jpg') }}" alt="" class="third_img">
+                </div>
+                <div class="third_text_size">
+                    <div class="third_text_block">
+                        <ul>
+                            <li>Проекты для новичков и профи</li>
+                            <li>Честный рейтинг</li>
+                            <li>Наличие долгосрочных предложений</li>
+                            <li>Безопасное сотрудничество с гарантированной оплатой</li>
+                        </ul>
+                        <a href="ruslightaccount.html" class="first_button">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fourth_block_size">
+        <div id="fourth_block_back">
+            <div id="fourth_half_block">
+                <img src="{{ url_for('static', path='images/comp.jpg') }}" alt="comp.jpg" class="fourth_block_img">
+            </div>
+            <div id="fourth_half_block2">
+                <div class="fourth2_half">
+                    <img src="{{ url_for('static', path='images/skr.jpg') }}" alt="skr.jpg" class="fourth_block_img">
+                </div>
+                <div class="place_f"></div>
+                <div class="fourth_text_block">
+                    <h2>ИСТОРИЯ СОЗДАНИЯ MUSICHUB</h2>
+                    <div class="line">—————</div>
+                    <p>В 2023 году трое друзей-музыкантов решили создать платформу, которая бы помогала музыкантам находить вакансии. Они саии регулярно выступали на разных мероприятиях, но находясь в этой сфере часто замечали, что люди сталкиваются с трудностями при поиске выступлений. Хорошим исполнителям приходилось тратить много времени и усилий на поиск заказчиков, и не всегда организаторы оправдывали договоренные условия. И мы решили сделать систему, которая будет объединять музыкантов и заказчиков мероприятий. Несколько бессонных недель ушло на разработку концепции, дизайна и функционала. В 2024 году музыкальная бизнес-платформа была запущена в тестовом режиме. MusicHub получил много положительных отзывов и в 2025 году площадка была запущена в полном объеме. В настоящее время насчитывается более 1 000 000 зарегистрированных пользователей. Мы довольны успехом MusicHub и со своей стороны всеми силами способствуем совершенствованию платформы и развитию музыкальной индустрии СНГ через нее.</p>
+                    <a href="rusaccount.html"><button class="first_button">Read More</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <h2>MUSIC HUB FOREVER</h2>
+        <hr color= "#92774d">
+        <p>
+            Нам доверяют:
+            <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+            <br>и многие другие легенды
+        </p>
+            <hr color= #222222>
+        <div id="footer_images">
+            <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+        </div>
+    </div>
+
+</body>
+</html>
+

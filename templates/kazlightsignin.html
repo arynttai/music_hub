@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='stylelight.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="kazdarksignin.html">Тұтынушыларға</a>
+                <a href="kazdarksignin.html">Әртістерге</a> 
+                <a href="kazdarkevents.html">Оқиғалар</a> 
+                
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarksignin.html" class="language" style="color: white !important;">kz</a>/
+                <a href="rusdarksignin.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazdarksignin.html"><img src="{{ url_for('static', path='images/sun-regular.svg') }}" height="30" width="30" alt="sun"></a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="lmenuOverlay" onclick="togglelmenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazlight.html">Басты бет</a></li>
+                <li><a href="kazlightaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazlightevents.html">Оқиғалар</a></li>
+                <li><a href="kazlightquestions.html">Жиі қойылатын сұрақтар</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sign-in-container">
+        <h2>Аккаунтқа кіру</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Пайдалаушының аты:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Құпиясөз:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <a href="kazlightmain.html" class="btn btn-custom">Кіру</a>
+            <div class="form-group-href">
+                <label>Сіз әлі аккаунт тіркемегенсіз бе? <a href="kazlightaccount.html">Аккаунтты тіркеу</a><br></label>
+            </div>
+        </form>
+    </div>
+
+    <div id="footer">
+        <h2>MUSIC HUB FOREVER</h2>
+        <hr color= "#92774d">
+        <p>
+            Бізге сенеді:
+            <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+            <br>және тағы да басқалары .
+        </p>
+        </p>
+            <hr color= #222222>
+        <div id="footer_images">
+            <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+        </div>
+    </div>
+
+
+</body>
+</html>

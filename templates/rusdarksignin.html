@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans" />
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="rusdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="rusdarksignin.html">Заказчикам</a>
+                <a href="rusdarksignin.html">Артистам</a> 
+                <a href="rusdarkevents.html">События</a> 
+                
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarksignin.html" class="language">kz</a>/
+                <a href="rusdarksignin.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="ruslightsignin.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="rusdarkaccount.html">Войти / Регистрация</a></li>
+                <li><a href="rusdark.html">Главная страница</a></li>
+                <li><a href="rusdarkevents.html">События</a></li>
+                <li><a href="rusdarkquestions.html">Часто задаваемые вопросы</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sign-in-container">
+        <h2>Войти в аккаунт</h2>
+        <form method="post" action="/rusdarksignin.html">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="user_email" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="user_password" name="password" required>
+            </div>
+            <a href="rusdarkmain.html" class="btn btn-custom">Войти</a>
+            <div class="form-group-href">
+                <label>Еще не создали аккаунт? <a href="ruslightaccount.html">Создать аккаунт</a><br></label>
+            </div>
+        </form>
+    </div>
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Нам доверяют:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>и многие другие легенды
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+
+</body>
+</html>

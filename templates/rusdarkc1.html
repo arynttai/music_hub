@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="rusdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="rusdarkmusicians.html">Заказчикам</a>
+                <a href="rusdarkcustomers.html">Артистам</a> 
+                <a href="rusdarkevents.html">События</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarkc1.html" class="kazakh_language">kz</a> /
+                <a href="rusdarkc1.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="ruslightc1.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="togglemenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="rusdarkmain.html">Главная страница</a></li>
+                <li><a href="rusdarkaccount.html">Войти / Регистрация</a></li>
+                <li><a href="rusdarkevents.html">События</a></li>
+                <li><a href="rusdarkquestions.html">Часто задаваемые вопросы</a></li>
+                <li><a href="rusdarkmusform.html">Добавить резюме группы</a></li>
+                <li><a href="rusdarkevform.html">Добавить мероприятие</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div id="portfolio-card_size">
+        <div class="portfolio-card">
+            <div class="inner-card">
+                <img src="{{ url_for('static', path='images/cust1.jpg') }}" alt="Изображение группы" class="group-image">
+                <div class="group-info">
+                    <h3 class="group-name_card">Рок-фестиваль "Гитарная Легенда"</h3>
+                    <p class="group-specialization"><strong>Специализация:</strong> Тематические и Частные мероприятия / Рок-группа</strong> </p>
+                    <p class="group-specialization"><strong>Место:</strong> Москва, Россия</p> 
+                    <p class="group-specialization"><strong>Количество номеров:</strong> 4 номера</p> 
+                </div>
+            </div>
+            <div class="group-description_card">
+            <div class="additional-info">
+                    <strong>Роли:</strong> Лидер вокал, соло-гитарист, ритм-гитарист, ударник. <br>
+                    <strong>Описание:</strong> Мы предлагаем профессиональное звуковое оборудование и щедрые гонорары. Ищем энергичные группы для создания атмосферы нашего фестиваля. <br>
+                    <strong>Контактная информация:</strong> rockfestival@example.com, +123456789 <br>
+                    <strong>Средний чек за один сет выступлений:</strong> $500-800
+            </div>
+            <div class="video-section">
+                <iframe width="695" height="315" src="{{ url_for('static', path='images/rockfestival.mp4') }}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <a class="first_button" href="rusdarkcustomers.html">Вернуться</a>
+            </div>
+        </div>
+    </div> 
+    
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Нам доверяют:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>и многие другие легенды
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+
+</body>
+</html>

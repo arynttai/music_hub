@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazdarkmain.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="kazdarkmusicians.html">Тұтынушыларға</a>
+                <a href="kazdarkcustomers.html">Әртістерге</a> 
+                <a href="kazdarkevents.html">Оқиғалар</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarkg3.html" class="kazakh_language" style="color: white !important;">kz</a> /
+                <a href="rusdarkg3.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazlightg3.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/menu_image.jpg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazdark.html">Басты бет</a></li>
+                <li><a href="kazdarkaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazdarkevents.html">Оқиғалар</a></li>
+                <li><a href="kazdarkquestions.html">Жиі қойылатын сұрақтар</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="portfolio-card_size">
+        <div class="portfolio-card">
+            <div class="inner-card">
+                <img src="{{ url_for('static', path='images/nirvana.jpg') }}" alt="Nirvana" class="group-image">
+                <div class="group-info">
+                    <h3 class="group-name_card">Nirvana</h3>
+                    <p class="group-specialization"><strong>Мамандық:</strong> Тақырыптық және жеке іс-шаралар / Рок тобы</p>
+                    <p class="group-specialization"><strong>Жұмыс тәжірибесі:</strong> Музыка индустриясында 10 жылдан астам уақыт</p>
+                    <p class="group-specialization"><strong>Саны:</strong> 3 қатысушы</p>
+                </div>
+            </div>
+            <div class="group-description_card">
+                <div class="additional-info">
+                    <strong>Рөлдері:</strong> Вокалист, гитарист, барабаншы <br>
+                    <strong>Топтың сипаттамасы:</strong> 90-шы жылдардағы музыка индустриясына айтарлықтай әсер еткен ерекше стилі бар аңызға айналған рок тобы <br>
+                    <strong>Байланыс ақпараты:</strong> nirvana@example.com, +123456789 <br>
+                    <strong>Бір орындау сеті үшін орташа чек:</strong> $600-900
+                </div>
+                <div class="video-section">
+                    <iframe width="695" height="315" src="{{ url_for('static', path='images/Nirvana - Smells Like Teen Spirit (Official Music Video).mp4') }}" title="Дос Мукасан Live Performance" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a class="first_button" href="kazdarkmusicians.html">Қайту</a>
+            </div>
+        </div>
+    </div>
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Бізге сенеді:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>және тағы да басқа аңыз адамдар.
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+
+</body>
+</html>

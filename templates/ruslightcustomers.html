@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='stylelight.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="leader_block1">
+                <h2><a href="ruslight.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="ruslightmusicians.html">Заказчикам</a>
+                <a href="ruslightcustomers.html">Артистам</a> 
+                <a href="ruslightevents.html">События</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazlightcustomers.html" class="kazakh_language">kz</a> /
+                <a href="ruslightcustomers.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="rusdarkcustomers.html">
+                <img src="{{ url_for('static', path='images/sun-regular.svg') }}" height="30" width="30" alt="sun">
+            </a>
+            <div class="menu" onclick="togglelmenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="lmenuOverlay" onclick="togglelmenuOverlay()">
+        <div class="menuContent">
+            <ul> 
+                <li><a href="ruslightmain.html">Главная страница</a></li>
+                <li><a href="ruslightaccount.html">Войти / Регистрация</a></li>
+                <li><a href="ruslightevents.html">События</a></li>
+                <li><a href="ruslightquestions.html">Часто задаваемые вопросы</a></li>
+                <li><a href="ruslightmusform.html">Добавить резюме группы</a></li>
+                <li><a href="ruslightevform.html">Добавить мероприятие</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="cards_size">
+        <div class="card-container">
+            <div class="card">
+              <img src="{{ url_for('static', path='images/cust1.jpg') }}" alt="Группа 1" class="card-image">
+              <div class="card-content">
+                <div class="group-info">
+                  <h2 class="group-name">Рок-фестиваль "Гитарная Легенда"</h2>
+                </div>
+                <p class="group-specialization">Тематические и Частные мероприятия / Рок-группа</p>
+                <p class="group-location">Москва, Россия</p>
+                <p class="group-description">Мы предлагаем профессиональное звуковое оборудование и щедрые гонорары. Ищем энергичные группы для создания атмосферы нашего фестиваля.</p>
+                <a class="transparent-button" href="ruslightc1.html">Перейти</a>
+              </div>
+            </div>
+          
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust2.jpg') }}" alt="Группа 2" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Jazz Night at City Plaza</h2>
+                  </div>
+                  <p class="group-specialization">Тематические и Частные мероприятия / Джаз-группа</p>
+                  <p class="group-location">Нью-Йорк, США</p>
+                  <p class="group-description">У нас вас ждут высокие гонорары и профессиональное освещение. Нам нужны талантливые джазовые коллективы для украшения нашего мероприятия.</p>
+                  <a class="transparent-button" href="ruslightc2.html">Перейти</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust3.jpg') }}" alt="Группа 3" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Большой Открытый Фестиваль Мировой Музыки</h2>
+                    </div>
+                    <p class="group-specialization">Тематические и Частные мероприятия / Мировая Музыка</p>
+                    <p class="group-location">Лондон, Великобритания</p>
+                    <p class="group-description">Профессиональные условия и отличное звуковое оборудование. Ищем группы, способные принести уникальные звуки на нашу сцену.</p>
+                    <a class="transparent-button" href="ruslightc3.html">Перейти</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust4.jpg') }}" alt="Группа 4" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Романтический Вечер на берегу реки</h2>
+                    </div>
+                    <p class="group-specialization">Тематические и Частные мероприятия / Акустические Группы</p>
+                    <p class="group-location">Париж, Франция</p>
+                    <p class="group-description">Щедрые гонорары и качественное звуковое оборудование. Ищем акустические группы для создания незабываемой атмосферы.</p>
+                    <a class="transparent-button" href="ruslightc4.html">Перейти</a>
+                </div>
+            </div>
+            
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust5.jpg') }}" alt="Группа 5" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Летний Фестиваль Латиноамериканской Музыки</h2>
+                    </div>
+                    <p class="group-specialization">Тематические и Частные мероприятия / Латиноамериканская Музыка</p>
+                    <p class="group-location">Буэнос-Айрес, Аргентина</p>
+                    <p class="group-description">Хорошие условия и возможность представить свои таланты. Ищем группы, которые принесут энергию и страсть нашему событию.</p>
+                    <a class="transparent-button" href="ruslightc5.html">Перейти</a>
+                </div>
+            </div>
+            
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/cust6.jpg') }}" alt="Группа 6" class="card-image">
+                <div class="card-content">
+                    <div class="group-info">
+                        <h2 class="group-name">Классический Вечер в Королевском Театре</h2>
+                    </div>
+                    <p class="group-specialization">Тематические и Частные мероприятия / Классическая Музыка</p>
+                    <p class="group-location">Вена, Австрия</p>
+                    <p class="group-description">Профессиональное звуковое оборудование и благодарные зрители. Ищем талантливые классические коллективы для создания элегантной атмосферы.</p>
+                    <a class="transparent-button" href="ruslightc6.html">Перейти</a>
+                </div>
+            </div>
+            
+
+          </div>
+          
+    </div>
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Нам доверяют:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>и многие другие легенды
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+
+</body>
+</html>
+

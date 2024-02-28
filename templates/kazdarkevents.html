@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="kazdarksignin.html">Тұтынушыларға</a>
+                <a href="kazdarksignin.html">Әртістерге</a> 
+                <a href="kazdarkevents.html">Оқиғалар</a> 
+                
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdarkevents.html" class="language" style="color: white !important;">kz</a>/
+                <a href="rusdarkevents.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazlightevents.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazdarkaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazdark.html">Басты бет</a></li>
+                <li><a href="kazdarkevents.html">Оқиғалар</a></li>
+                <li><a href="kazdarkquestions.html">Жиі қойылатын сұрақтар</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="events_сover">
+        <img src="{{ url_for('static', path='images/per (2).jpg') }}">
+    </div>
+
+    <hr>
+
+    <div id="#events_block1_size">
+        <div class="events_block1">
+            <h2>БІЗДІҢ ПЛАТФОРМА ЖАҢАРТУЛАРЫ</h2>
+            <p>Біз Сізге біздің сайтта болуды одан да ыңғайлы және функционалды ететін соңғы жаңартуларды ұсынуға қуаныштымыз!</p>
+        </div>
+
+        <hr color=#3f3f3f>
+
+        <div class="events_block1">
+            <h2>ЖАҢА ТАҚЫРЫПТАР: ҚАРАҢҒЫ ЖӘНЕ АШЫҚ</h2>
+            <p>Енді сіз өзіңіздің қалауыңыз бойынша сайттың көрінісін реттеу үшін қараңғы және ашық интерфейс тақырыптарын таңдай аласыз. Сіздің қажеттіліктеріңізге сәйкес келетін стильді таңдай отырып, ыңғайлы жұмыс жасаңыз.</p>
+        </div>
+
+        <hr color=#3f3f3f>
+
+        <div class="events_block1">
+            <h2>ЖАҢА ТІЛ: ҚАЗАҚ ТІЛІ</h2>
+            <p>Біз мәдениеттер мен тілдердің алуан түрлілігіне көп көңіл бөлеміз, сондықтан біздің сайт қазақ тілін қолдайтынын қуана хабарлаймыз. Бұл көптеген адамдарға біздің платформаны ана тілінде үйренуге және пайдалануға мүмкіндік береді.</p>
+        </div>
+
+        <hr color=#3f3f3f>
+
+        <div class="events_block1">
+            <h2>YOUTUBE-ТЕН СӨЙЛЕУ СІЛТЕМЕЛЕРІН ТІРКЕУ</h2>
+            <p>Енді музыканттар өздерінің портфолиоларын YouTube-тен өз қойылымдарына Сілтемелер қосу арқылы толықтыра алады. Бұл сіздің шығармашылығыңызды ұсынуға және клиенттерге сіздің талантыңыз бен стиліңіз туралы толық түсінік беруге тамаша мүмкіндік.</p>
+        </div>
+
+        <hr color=#3f3f3f>
+
+        <div class="events_block1"> 
+            <p>Инновацияларды жіберіп алмаңыз! Біз сізге өзін-өзі көрсету және табысқа жету үшін көбірек құралдар мен мүмкіндіктер беру үшін Music Hub платформасын жақсарту үшін үнемі жұмыс істейміз.</p>
+        </div>
+    </div>
+
+
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Бізге сенеді:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>және тағы да басқа аңыз адамдар.
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - басты бет</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="kazdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="#second_block_size_back">Тұтынушыларға</a>
+                <a href="#third_content_block1">Әртістерге</a> 
+                <a href="kazdarkevents.html">Оқиғалар</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+
+            <div class="header_block3">
+                <a href="kazdark.html" class="kazakh_language" style="color: white !important;">kz</a> /
+                <a href="rusdark.html" class="language">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="kazlight.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="toggleMenuOverlay()">
+        <div class="menuContent">
+            <ul>
+                <li><a href="kazdark.html">Басты бет</a></li>
+                <li><a href="kazdarkaccount.html">Кіру / Тіркелу</a></li>
+                <li><a href="kazdarkevents.html">Оқиғалар</a></li>
+                <li><a href="kazdarkquestions.html">Жиі қойылатын сұрақтар </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="first_block_size_back">
+        <div id="first_block">
+            <div class="first_half_one"></div>
+            <div class="first_half_two">
+                <h2>Әртістерге</h2>
+                <p>Музыкаңызды әлемге жіберіңіз! Біздің платформа музыканттарға жаңа мүмкіндіктерді ілгерілету және іздеу құралдарын ұсына отырып, салада өз орнын табуға көмектеседі.</p>
+                <a href="kazdarkaccount.html" class="first_button">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="second_block_size_back">
+        <div id="second_block">
+            <div class="second_half_one"></div>
+            <div class="second_half_two">
+                <h2>Тұтынушыларға</h2>
+                <p>Біздің платформадағы «Тұтынушылар» бөліміне қош келдіңіз, мұнда сіз суретшілерді стиль, жанр, тәжірибе және тіпті орналасқан жері бойынша таба аласыз. Арнайы іс-шараға суретші іздесеңіз немесе ұзақ мерзімді ынтымақтастық үшін тізбеңізді нығайтқыңыз келсе, мұнда сіз көптеген талантты мамандарды таба аласыз.</p>
+                <a href="kazdarkaccount.html" class="first_button">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="third_block_size">
+        <div id="third_block">
+            <div id="third_content_block1">
+                <div></div>            
+                <h6 class="third_text1">Әртістерге</h6>
+                <h2 class="third_text2">Неге әртістер Music Hub-ты таңдайды?</h2>
+            </div>
+            <div id="third_content_block2">
+                <div class="third_img_block">
+                    <img src="{{ url_for('static', path='images/papa.jpg') }}" alt="" class="third_img">
+                </div>
+                <div class="third_text_size">
+                    <div class="third_text_block">
+                        <ul>
+                            <li>Жаңадан бастаушылар мен кәсіпқойларға арналған жобалар</li>
+                            <li>Адал рейтинг</li>
+                            <li>Ұзақ мерзімді ұсыныстардың болуы</li>
+                            <li>Кепілдендірілген төлеммен қауіпсіз ынтымақтастық</li>
+                        </ul>
+                        <a href="kazdarkaccount.html" class="first_button">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fourth_block_size">
+        <div id="fourth_block_back">
+            <div id="fourth_half_block">
+                <img src="{{ url_for('static', path='images/comp.jpg') }}" alt="comp.jpg" class="fourth_block_img">
+            </div>
+            <div id="fourth_half_block2">
+                <div class="fourth2_half">
+                    <img src="{{ url_for('static', path='images/skr.jpg') }}" alt="skr.jpg" class="fourth_block_img">
+                </div>
+                <div class="place_f"></div>
+                <div class="fourth_text_block">
+                    <h2>MUSICHUB ТАРИХЫ</h2>
+                    <div class="line">—————</div>
+                    <p>2023 жылы үш музыкант дос музыканттарға жұмыс табуға көмектесетін платформа құруға шешім қабылдады. Олар әртүрлі іс-шараларда үнемі өнер көрсетті, бірақ осы аймақта адамдар спектакльдерді табу қиынға соғатынын жиі байқады. Жақсы орындаушылар клиенттерді іздеуге көп уақыт пен күш жұмсауға тура келді, ал ұйымдастырушылар келісілген шарттарды әрқашан ақтай бермеді. Біз музыканттар мен іс-шара тұтынушыларын біріктіретін жүйе жасауды шештік. Ұйқысыз бірнеше апта тұжырымдаманы, дизайнды және функционалдылықты әзірлеуге жұмсалды. 2024 жылы музыкалық бизнес платформасы сынақ режимінде іске қосылды. MusicHub көптеген оң пікірлер алды және 2025 жылы платформа толығымен іске қосылды. Қазіргі уақытта 1 000 000-нан астам тіркелген пайдаланушылар бар. Біз MusicHub-тың жетістігіне қуаныштымыз және өз тарапымыздан платформаны жақсартуға және ол арқылы ТМД музыка индустриясын дамытуға бар күшімізді салудамыз.</p>
+                    <a href="rusaccount.html"><button class="first_button">Read More</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="footer">
+    <h2>MUSIC HUB FOREVER</h2>
+    <hr color= "#92774d">
+    <p>
+        Бізге сенеді:
+        <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+        <br>және тағы да басқа аңыз адамдар.
+    </p>
+        <hr color= #222222>
+    <div id="footer_images">
+        <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+    </div>
+</div>
+
+
+</body>
+</html>
+

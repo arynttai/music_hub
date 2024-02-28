@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub - главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='heart_icon-icons.com_50374.png') }}" height="30" width="30">
+    <script defer src="{{ url_for('static', path='script.js') }}"></script>
+</head>
+<body>
+    <div id="header_size">
+        <div id="header">
+            <div class="header_block1">
+                <h2><a href="rusdark.html">MUSICHUB</a></h2>
+            </div> 
+
+            <div class="header_block2">
+                <a href="rusdarkmusicians.html">Заказчикам</a>
+                <a href="rusdarkcustomers.html">Артистам</a> 
+                <a href="rusdarkevents.html">События</a> 
+            </div>
+
+            <div class="header_space_block"></div>
+ 
+            <div class="header_block3">
+                <a href="kazdarkmusicians.html" class="kazakh_language">kz</a> /
+                <a href="rusdarkmusicians.html" class="language" style="color: white !important;">ru</a>
+            </div>
+
+            <div class="header_block4">
+            <a href="ruslightmusicians.html"><img src="{{ url_for('static', path='images/night_mode_image.png') }}" height="30" width="30" alt="moon"> </a> 
+            <div class="menu" onclick="toggleMenuOverlay()"><img src="{{ url_for('static', path='images/bars-solid.svg') }}" height="30" width="30" alt="menu"></div>
+            </div>
+        </div>
+    </div>   
+
+    <div id="menuOverlay" onclick="togglemenuOverlay()">
+      <div class="menuContent">
+          <ul>
+              <li><a href="rusdarkmain.html">Главная страница</a></li>
+              <li><a href="rusdarkaccount.html">Войти / Регистрация</a></li>
+              <li><a href="rusdarkevents.html">События</a></li>
+              <li><a href="rusdarkquestions.html">Часто задаваемые вопросы</a></li>
+              <li><a href="rusdarkmusform.html">Добавить резюме группы</a></li>
+              <li><a href="rusdarkevform.html">Добавить мероприятие</a></li>
+          </ul>
+      </div>
+  </div>
+
+    <hr>
+
+    <div id="cards_size">
+        <div class="card-container">
+            <div class="card">
+              <img src="{{ url_for('static', path='images/group1.jpg') }}" alt="Группа 1" class="card-image">
+              <div class="card-content">
+                <div class="group-info">
+                  <h2 class="group-name">Metallica</h2>
+                  <div class="rating">
+                    <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                    <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                    <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                    <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                    <img src="{{ url_for('static', path='images/star-regular.svg') }}" alt="empty star" class="star">
+                  </div>
+                </div>
+                <p class="group-specialization">Тематические мероприятия / Металл-группа</p>
+                <p class="group-location">Алматы, Казахстан</p>
+                <p class="group-description">Максимальная отдача всем проектам! Гарантированный восторг зрителей и незабываемые воспоминания от легендарной группы.</p>
+                <a class="transparent-button" href="rusdarkg1.html">Перейти</a>
+              </div>
+            </div>
+          
+            <div class="card">
+                <img src="{{ url_for('static', path='images/acdc.jpg') }}" alt="Группа 2" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">AC/DC</h2>
+                    <div class="rating">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="empty star" class="star">
+                    </div>
+                  </div>
+                  <p class="group-specialization">Частные и Тематические мероприятия / Рок-группа</p>
+                  <p class="group-location">Актобе, Казахстан</p>
+                  <p class="group-description">Смесь энергичных риффов и мелодичных мотивов. Откройте для себя новый мир звука и эмоций с нами!</p>
+                  <a class="transparent-button" href="rusdarkg2.html">Перейти</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/nirvana.jpg') }}" alt="Группа 3" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Nirvana</h2>
+                    <div class="rating">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="empty star" class="star">
+                    </div>
+                  </div>
+                  <p class="group-specialization">Тематические и Частные мероприятия / Рок-группа</p>
+                  <p class="group-location">Алматы, Казахстан</p>
+                  <p class="group-description">Инновационный подход к классическим жанрам. Мы создаем музыку, которая затрагивает сердца и умы. </p>
+                  <a class="transparent-button" href="rusdarkg3.html">Перейти</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/arctik.jpg') }}" alt="Группа 4" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Arctic Monkeys</h2>
+                    <div class="rating">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-regular.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-regular.svg') }}" alt="empty star" class="star">
+                    </div>
+                  </div>
+                  <p class="group-specialization">Акустические концерты, частные мероприятия / Инди-рок, постпанк-ривайвл</p>
+                  <p class="group-location">Астана, Казахстан</p>
+                  <p class="group-description">Эклектичная смесь стилей, от фанка до хип-хопа. Наша музыка - это искусство, которое вдохновляет</p>
+                  <a class="transparent-button" href="rusdarkg4.html">Перейти</a>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/91.jpg') }}" alt="Группа 5" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Ninety One</h2>
+                    <div class="rating">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-regular.svg') }}" alt="empty star" class="star">
+                    </div>
+                  </div>
+                  <p class="group-specialization">Молодежные общественные мероприятия / Поп, Q-pop, EDM </p>
+                  <p class="group-location">Шымкент, Казахстан</p>
+                  <p class="group-description">Гармония музыки и текста, создающая атмосферу истинных эмоций. Откройте для себя наше музыкальное путешествие</p>
+                  <a class="transparent-button" href="rusdarkg5.html">Перейти</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', path='images/dos.jpeg') }}" alt="Группа 6" class="card-image">
+                <div class="card-content">
+                  <div class="group-info">
+                    <h2 class="group-name">Дос Мукасан</h2>
+                    <div class="rating">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="filled star" class="star">
+                      <img src="{{ url_for('static', path='images/star-solid.svg') }}" alt="empty star" class="star">
+                    </div>
+                  </div>
+                  <p class="group-specialization">Патриотические концерты / Казахский вокально-инструментальный ансамбль</p>
+                  <p class="group-location">Павлодар, Казахстан</p>
+                  <p class="group-description">Импульсивные ритмы, проникающие в каждую клеточку вашей души. Наша музыка - это искусство, воплощенное в звуках.</p>
+                  <a class="transparent-button" href="rusdarkg6.html">Перейти</a>
+                </div>
+            </div>
+
+          </div>
+          
+    </div>
+
+
+    <div id="footer">
+        <h2>MUSIC HUB FOREVER</h2>
+        <hr color= "#92774d">
+        <p>
+            Нам доверяют:
+            <br>Мартынцов Н.В.    Хабиев Ж.К.    Ескожа С.А    Мырзахнова С.К.    Сариева А.М     
+            <br>и многие другие легенды
+        </p>
+            <hr color= #222222>
+        <div id="footer_images">
+            <img src="{{ url_for('static', path='images/fb.png') }}">
+        <img src="{{ url_for('static', path='images/twitter (2).png') }}">
+        <img src="{{ url_for('static', path='images/insta (1).png') }}">
+        <img src="{{ url_for('static', path='images/whatsapp.png') }}">
+        </div>
+    </div>
+
+
+</body>
+</html>
+
